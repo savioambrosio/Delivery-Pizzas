@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Delivery Pizzas</title>
+    <link rel="icon" href="images/piz.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+    <link rel="stylesheet" href="lightbox.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <script>
+      function loading(){
+        document.getElementsByClassName("box-load")[0].style.display = "none";
+        document.getElementsByClassName('contento')[0].style.display = "block";
+      }
+    </script>
+</head>
+<body onload="loading()">
+    <div class="box-load">
+      <div class="ola">
+        <div class="pre"></div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="contento">
+      <article>
+        <button class="scrollTop" onclick="backTop();">
+          <img src="images/arrow.png" alt="" color="white">
+        </button>
+      </article>
+      <section id = "navega">
+          <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #252525;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="images/piz.png" alt="" width="68" height="50" class="d-inline-block align-text-top">
+              </a>
+              <a class="navbar-brand" href="#">Delivery <span class="text-warning" >Pizzas</span></a>
+              <div class="carro">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="#fbbe07" class="bi bi-cart-dash-fill" viewBox="0 0 16 16">
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.5 7h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1z"/>
+              </svg>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-6 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#polaroid"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#fbbe07" class="bi bi-house" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                      <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                    </svg>&nbspHome&nbsp</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#cardapio"><i class="bi bi-house-fill"></i>                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#fbbe07" class="bi bi-menu-up" viewBox="0 0 16 16">
+                      <path d="M7.646 15.854a.5.5 0 0 0 .708 0L10.207 14H14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.793l1.853 1.854zM1 9V6h14v3H1zm14 1v2a1 1 0 0 1-1 1h-3.793a1 1 0 0 0-.707.293l-1.5 1.5-1.5-1.5A1 1 0 0 0 5.793 13H2a1 1 0 0 1-1-1v-2h14zm0-5H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v2zM2 11.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 0-1h-8a.5.5 0 0 0-.5.5zm0-4a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11a.5.5 0 0 0-.5.5zm0-4a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1h-6a.5.5 0 0 0-.5.5z"/>
+                    </svg>&nbspCardapio&nbsp</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#contactoos"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#fbbe07" class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                    </svg>&nbspContacto&nbsp</a>
+                  </li>
+                  <li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#localizacao"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#fbbe07" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                      <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                      <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>&nbspLocalização&nbsp</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#quem"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#fbbe07" class="bi bi-question-circle" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                    </svg>&nbspQuem somos&nbsp</a>
+                  </li>
+              </div>
+            </div>
+          </nav>
+      </section>
+      <section id="polaroid">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/pizzapri.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/pizzasecu.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/pizzater.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/pizzach.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <div class="cor">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <svg class="waves"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgb(252, 252, 248)" fill-opacity="700000" d="M0,288L60,272C120,256,240,224,360,224C480,224,600,256,720,261.3C840,267,960,245,1080,245.3C1200,245,1320,267,1380,277.3L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+      
+      </section>
+      <section id="cardapio">
+        <div class="container-fluid">
+            <h1 class="text-center">Cardapio<span class="text-warning" > Pizzas</span></h1>
+        </div>
+      </section>
+      <section id="comida">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/pizzatudo.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title card-title fw-bold mb-2"">Pizza Misturada</h5>
+                <p class="card-text"align="justify">Molho e rodelas de tomates frescos, salpicada com alho, coberta com azeitonas verdes sem caroços, com salchicha.</p>
+                <h7 class="card-text fw-bold mb-2">Preço:</h7>
+                <span class="card-text">4000kz</span>
+                <p class="card-text"></p>
+                <button type="button" class="btn btn-warning text-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adcionar no Carrinho<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffff" class="bi bi-cart-dash-fill" viewBox="0 0 16 16">
+                  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.5 7h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Ultima actualização 3 minutos atrás</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/pizzatumo.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title card-title fw-bold mb-2">Pizza de Atum</h5>
+                <p class="card-text"align="justify">Molho de tomates frescos, atum, cebola, milho em volta e salpicada de orégano, com diferentes tamanho.</p>
+                <h7 class="card-text fw-bold mb-2">Preço:</h7>
+                <span class="card-text">7000kz</span>
+                <p class="card-text"></p>
+                <button type="button" class="btn btn-warning text-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adcionar no Carrinho<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffff" class="bi bi-cart-dash-fill" viewBox="0 0 16 16">
+                  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.5 7h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Ultima actualização 3 minutos atrás</small>
+              </div>
+            </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/pizzachoco2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title fw-bold mb-2">Pizza de Chocolate</h5>
+              <p class="card-text" align="justify">Delicada massa, chocolate meio amargo, coberta com chocolate branco e preto e salpicada e morango.</p>
+              <h7 class="card-text fw-bold mb-2">Preço:</h7>
+              <span class="card-text">5000kz</span>
+              <p class="card-text"></p>
+              <button type="button" class="btn btn-warning text-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adcionar no Carrinho<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffff" class="bi bi-cart-dash-fill" viewBox="0 0 16 16">
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.5 7h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1z"/>
+                </svg>
+              </button>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Ultima actualização 3 minutos atrás</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+        <div class="card h-100">
+          <img src="images/pizzachou.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2"">Pizza de chouriço</h5>
+            <p class="card-text" align="justify">Feito de cobertura de chouriço em rodela com queijo ralado  de musserela, tomate e peru defumado, coberta com catupiry e salpicada de orégano.</p>
+            <h7 class="card-text fw-bold mb-2">Preço:</h7>
+            <span class="card-text">2500kz</span>
+            <p class="card-text"></p>
+            <button type="button" class="btn btn-warning text-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adcionar no Carrinho<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffff" class="bi bi-cart-dash-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.5 7h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Ultima actualização 3 minutos atrás</small>
+          </div>
+        </div>
+        </div>
+        <div class="col">
+        <div class="card h-100">
+        <img src="images/pizzafrango.jpg.opdownload" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fw-bold mb-2"">Pizza de Frango</h5>
+          <p class="card-text" align="justify">Farinha de trigo enriquecida com ferro e ácido fólico, peito de frango, polpa de tomate, queijo mussarela, requeijão, creme de leite em pó, sal, açúcar, azeite de oliva.</p>
+          <h7 class="card-text fw-bold mb-2">Preço:</h7>
+          <span class="card-text">8000kz</span>
+          <p class="card-text"></p>
+          <button type="button" class="btn btn-warning text-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adcionar no Carrinho<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffff" class="bi bi-cart-dash-fill" viewBox="0 0 16 16">
+            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.5 7h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Ultima actualização 3 minutos atrás</small>
+        </div>
+        </div>
+        </div>
+        <div class="col">
+        <div class="card h-100">
+        <img src="images/pizzat.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title fw-bold mb-2"">Pizza de Tomate</h5>
+        <p class="card-text" align="justify">Molho de tomates frescos, mussarela, rodelas de tomates frescos, filés de anchovas e orégano, tomate em volta, com um pouco de carne moida</p>
+        <h7 class="card-text fw-bold mb-2">Preço:</h7>
+        <span class="card-text">9000kz</span>
+        <p class="card-text"></p>
+        <button type="button" class="btn btn-warning text-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adcionar no Carrinho<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffff" class="bi bi-cart-dash-fill" viewBox="0 0 16 16">
+          <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.5 7h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1z"/>
+          </svg>
+        </button>
+      </div>
+        <div class="card-footer">
+        <small class="text-muted">Ultima actualização 3 minutos atrás</small>
+        </div>
+        </div>
+
+      </section>
+      <section id="quem">
+        <div id="contacto" class="container-fluid">
+            <h1 class="text-center">Quem<span class="text-warning"> Somos</span></h1>
+        </div>
+      </section>
+      
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Efectuar Encomenda</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="ola">
+                <div class="container-fluid row mt-1 ms-auto justify-content-center">
+                  <img src="images/piz.png" class="card-img-top" alt="..." >
+                <!-- Grid column -->
+                </div>
+              </div>
+              <div class ="forma">
+                <form class="row g-3">
+                  <div class="col-md-7 container-fluid">
+                    <input type="text" class="form-control" id="validationDefault01" placeholder="nome*" required>
+                  </div>
+                  <div class="col-md-7 container-fluid">
+                    <input type="text" class="form-control" id="validationDefault03" placeholder="telefone*"required>
+                  </div>
+                  <div class="col-md-7 container-fluid">
+                    <select class="form-select" id="validationDefault04" required>
+                      <option selected disabled value="">Tipo de pizza</option>
+                      <option>pizza de tomate</option>
+                      <option>pizza de chocolate</option>
+                      <option>pizza de atum</option>
+                      <option>pizza de banana</option>
+                      <option>pizza de frango</option>
+                      <option>pizza de chouriço</option>
+                      <option>pizza de misturada</option>
+                      <option>pizza de morango</option>
+                    </select>
+                </div>
+                  <div class="col-md-7 container-fluid">
+                      <select class="form-select" id="validationDefault04" required>
+                        <option selected disabled value="">Tamanho</option>
+                        <option>grande</option>
+                        <option>médio</option>
+                        <option>pequeno</option>
+                      </select>
+                  </div>
+                  <div class="col-md-7 container-fluid">
+                    <select class="form-select" id="validationDefault04" required>
+                      <option selected disabled value="">Quantidade</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  <button class="btn btn-warning text-light" type="submit">Encomendar</button>
+                </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <section id="quems">
+        <div class="container">
+          <div class="row align-items-start">
+            <div class="col">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Quem somos afinal?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="accordion-body" align="justify">Somos uma empresa no ramo da pizzaria desde 2022, disponivel para diversos eventos com ótima qualidade e a um preço acessível pensando sempre no cliente e estamos disponível das 7h até as 22h. Dando suporte de melhor qualidade no ramo da pizzaria fazendo o cliente ter uma boa experiencia ao optar pelo nosso serviço e também estamos dísponiveis para parcerias..</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Porque que somos a melhor opção?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="accordion-body" align="justify">Somos a melhor opção Porque temos os melhores sabores existente aqui em Luanda desde, pizzas doces até as salgadas, venha nos visitar e provar das melhores pizzas de luanda.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container-fluid carta">
+                  <div class="card" >
+                    <div class="card" style="max-width: 560px;">
+                      <div class="row g-4">
+                        <div class="col-md-5">
+                          <img src="images/ima.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h5 class="card-title">Gerente<sapn class="text-warning"> Sávio Ambrósio</sapn></h5>
+                            <p class="card-text" align="justify">Temos a melhor variedade de pizzas para a sua melhor refeição, disponibilizamos da melhor pizza que existe em Luanda, venha provar que vais amar.</p>
+                            <p class="card-text"><small class="text-muted">Luanda, 27.09.22</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-18 mb-3">
+                    <div class="single">
+                      <a href="images/ima4.jpg" data-lightbox="mygallery" data-title="Parte frontal da Nossa e vossa pizzaria"><img src="images/ima4.jpg" alt="" class="img-fluid"></a>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 mb-3">
+                    <a href="images/ima2.jpg" data-lightbox="mygallery" data-title="Parte interna da vossa pizzaria"><img src="images/ima2.jpg" alt="" class="img-fluid"></a>
+                  </div>
+                  <div class="col-lg-6 mb-3">
+                    <a href="images/ima1.jpg" data-lightbox="mygallery" data-title="Parte interna de lazer pizzaria"><img src="images/ima1.jpg" alt="" class="img-fluid"></a>
+                  </div>
+                  <div class="col-lg-6 mb-3">
+                    <a href="images/ima3.jpg" data-lightbox="mygallery" data-title="Parte interna da vossa pizzaria"><img src="images/ima3.jpg" alt="" class="img-fluid"></a>
+                  </div>
+                  <div class="col-lg-6 mb-3">
+                    <a href="images/iman.webp" data-lightbox="mygallery" data-title="Nosso grupo na abertura da pizzaria"><img src="images/iman.webp" alt="" class="img-fluid"></a>
+                  </div>
+                </div>
+              </div>
+              <script src="lightbox-plus-jquery.min.js"></script>
+            </div>
+        </div>
+          </div>
+        </div>
+      </section>
+        <section id="localizacao">
+            <div class="container-fluid">
+                <h1 class="text-center">Nossa<span class="text-warning" > Localização</span></h1>
+            </div>
+          </section>
+          <section id="rodape">
+            <div class="ola">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.6779595964094!2d13.225674214379548!3d-8.909501093904368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f5a43553231b%3A0x5636c0a14b9557c8!2sPizzaria%20Capricciosa%20-%20Nova%20Vida!5e0!3m2!1spt-PT!2sao!4v1664143732438!5m2!1spt-PT!2sao" width="90%" height="450" style="border-radius:7px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </section>
+          <section id="contactoos">
+            <div id="contacto" class="container-fluid">
+                <h1 class="text-center">Contactos</h1>
+            </div>
+          </section>
+          <section id="contactos">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#fbbe07" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  </svg>
+                  <h3>Onde estamos</h3>
+                  <p>Urbanização nova vida, Rua 53 casa 127</p>
+                </div>
+                <div class="col-md-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#fbbe07" class="bi bi-phone" viewBox="0 0 16 16">
+                    <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                  </svg>
+                  <h3>Contactos</h3>
+                  <p>+244 945512220<br>+244 992419634</p>
+                </div>
+                <div class="col-md-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#fbbe07" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                  </svg>
+                  <h3>Facebook</h3>
+                  <p>Delivery Pizzaria</p>
+                </div>
+                <div class="col-md-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#fbbe07" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                  </svg>
+                  <h3>Whatsapp</h3>
+                  <p>+244 945512220<br>+244 992419634</p>
+                </div>
+                <div class="col-md-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#fbbe07" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                  </svg>
+                  <h3>Email</h3>
+                  <p>delivarypizzaria@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="pedido">
+            <div class ="formu">
+              <div id="pedidos" class="container-fluid">
+                <h1 class="text-center">Formulário <span class="text-warning">de</span> Contacto</h1>
+              </div>
+              <form class="row g-3">
+                <div class="col-md-7 container-fluid">
+                  <input type="text" class="form-control" id="validationDefault01" placeholder="nome*" required>
+                </div>
+                <div class="col-md-7 container-fluid">
+                  <div class="input-group">
+                    <input type="text"  class="form-control" id="validationDefaultUsername"  placeholder="email do cliente*" required>
+                  </div>
+                </div>
+                <div class="col-md-7 container-fluid">
+                  <input type="text" class="form-control" id="validationDefault03" placeholder="telefone*"required>
+                </div>
+                <div class="col-md-7 container-fluid">
+                    <select class="form-select" id="validationDefault04" required>
+                      <option selected disabled value="">assunto</option>
+                      <option>parceria</option>
+                      <option>outros</option>
+                    </select>
+                </div>
+                <div class="col-md-7 container-fluid">
+                  <textarea class="form-control is-invalid" id="validationTextarea" placeholder="mensagem*" required rows="4"></textarea>
+                  <div class="invalid-feedback">
+                    Por favor ensira uma mensagem de texto.
+                  </div>
+                </div>
+                <div class="col-md-7 container-fluid">
+                  <button class="btn btn-warning text-light" type="submit">Enviar</button>
+                </div>
+              </form>
+            </div>
+          </section>
+      <section id="rodape2">
+        <!-- Footer -->
+      <footer class="text-center text-lg-start bg-dark text-muted justify-content-center">
+        <section id="por" class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+          <div class="me-2 d-none d-lg-block">
+            <span class="text-light fw-bold mb-2">Delivery <span class="text-dark" >Pizzas</span></span>&nbsp&nbsp<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ffff" class="bi bi-cart-dash-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.5 7h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1z"/>
+            </svg>
+          </div>
+        </section>
+        <section id="imagem">
+        <div class="container text-center ms-auto text-md-start mt-5" style="background-color:dark">
+            <!-- Grid row -->
+            <div class="row mt-3 ms-auto justify-content-center">
+              <img src="images/piz.png" class="card-img-top" alt="..." >
+            <!-- Grid column -->
+            </div>
+            <div class="text-light">
+                <span class="text-warning mb-2">Somos a melhor opção para uma refeição do melhor estilo</span>, venha provar 
+              vais gostar!
+            </div>
+            <!-- Grid row -->
+        </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright --> 
+        <div class="text-center p-4 navbar-light" style="background-color: rgb(17, 17, 16)">
+          <div class="ola1 text-light">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-calendar-minus-fill" viewBox="0 0 16 16">
+              <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM6 10h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1 0-1z"/>
+            </svg>&nbsp Jastec - Copyright ©2022, todos os direitos reservados
+          </div>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      </section>
+  </div>
+</div>
+</body>
+<script>
+  window.addEventListener('scroll', function(){
+    let scroll = document.querySelector('.scrollTop')
+        scroll.classList.toggle('active', window.scrollY > 450)
+  })
+
+  function backTop(){
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
