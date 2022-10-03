@@ -137,6 +137,26 @@
     height: 100%;
     text-align: center;
 }
+#comentario{
+    background-color:rgb(252, 252, 248);;
+    color: black;
+    display: grid;
+    padding-top: 79px;
+    padding-bottom: 25px;
+    height: 100%;
+    text-align: center;
+}
+#comente{
+    background-color:rgb(252, 252, 248);
+    padding-top: 10px;
+    padding-bottom: 18px;
+    height: 100%;
+    text-align: left;
+}
+#comente h1{
+    font-size: 20px;
+    padding-bottom: 15px;
+}
 #pedido{
     background-color:rgb(252, 252, 248);
     padding-top: 10px;
@@ -306,6 +326,10 @@
         font-size: 16px;
         padding-top: 1px;
         padding-bottom: 15px;
+    }
+    #comentario{
+        padding-top: 10px;
+        padding-bottom: 18px;
     }
     #quems .carta{
         background-color:rgb(252, 252, 248);
