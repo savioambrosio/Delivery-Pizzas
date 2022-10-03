@@ -146,17 +146,6 @@
     height: 100%;
     text-align: center;
 }
-#comente{
-    background-color:rgb(252, 252, 248);
-    padding-top: 10px;
-    padding-bottom: 18px;
-    height: 100%;
-    text-align: left;
-}
-#comente h1{
-    font-size: 20px;
-    padding-bottom: 15px;
-}
 #pedido{
     background-color:rgb(252, 252, 248);
     padding-top: 10px;
@@ -171,17 +160,14 @@
 
 #pedido .formu input{
     width: 100%;
-    height: 40px;
+    height: 38px;
     text-align: left;
     border-radius: 5px;
-    padding-top: 20px;
 }
-
 #pedido .formu{
     width: 95%;
     background-color: rgb(252, 252, 248);
     padding-left: 20px;
-    text-align: left;
 }
 #quems{
     background-color:rgb(252, 252, 248);
@@ -328,7 +314,7 @@
         padding-bottom: 15px;
     }
     #comentario{
-        padding-top: 10px;
+        padding-top: 1px;
         padding-bottom: 18px;
     }
     #quems .carta{
@@ -367,7 +353,7 @@
     }
     #localizacao{
         padding-top: 5px;
-        padding-bottom: 5px;
+        padding-bottom: 1px;
     }
     #contactoos{
         padding-top: 3px;
