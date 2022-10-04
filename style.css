@@ -92,8 +92,13 @@
     z-index: 9999;
     position: fixed;
 }
-#navega ul{
+#navega ul li a:hover{
     padding-right: 20px;
+    color: gold;
+}
+#navega ul .dropdown-menu{
+    padding-right: 20px;
+    color: black;
 }
 #polaroid .carousel-inner img{
     width: 90vw;
@@ -124,7 +129,6 @@
     height: 75vh;
     text-align: center;
 }
-
 #rodape iframe{
     box-shadow: 0 5px 7px rgb(65, 65, 65);
 }
@@ -141,10 +145,49 @@
     background-color:rgb(252, 252, 248);;
     color: black;
     display: grid;
-    padding-top: 79px;
-    padding-bottom: 25px;
+    padding-top: 70px;
+    padding-bottom: 5px;
     height: 100%;
     text-align: center;
+}
+#comentario #comentes{
+    padding-bottom: 15px;
+}
+#comentarioss{
+    background-color: rgb(63, 63, 63);
+    color: white;
+    display: grid;
+    padding-bottom: 15px;
+    height: 60vh;
+    text-align: center;
+    padding-left: 5px;
+    padding-top: 70px;
+}
+#comentarioss img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 2px solid gold;
+    border-radius: 50%;
+}
+#comentarioss h2{
+    padding-top: 22px;
+    font-size: 22px;
+}
+#comentarioss p{
+    padding-top: 22px;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 20%;
+}
+#comentarioss .carousel-control-next-icon {
+    background-color: gold;
+    border-radius: 2px;
+}
+#comentarioss .carousel-control-prev-icon {
+	background-color: gold;
+    border-radius: 2px;
 }
 #pedido{
     background-color:rgb(252, 252, 248);
@@ -314,8 +357,15 @@
         padding-bottom: 15px;
     }
     #comentario{
-        padding-top: 1px;
+        padding-top: 5px;
         padding-bottom: 18px;
+    }
+    #comentarioss{
+        height: 60vh;
+        padding-top: 30px;
+    }
+    #comentarioss p{
+        padding-top: 5px;
     }
     #quems .carta{
         background-color:rgb(252, 252, 248);
