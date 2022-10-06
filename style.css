@@ -395,8 +395,12 @@
         height: 110px;
     }
     #comentarioss{
-        height: 52vh;
+        height: 370px;
         padding-top: 30px;
+    }
+    #mud{
+        padding-top: 70px;
+        background-color: red;
     }
     #comentarioss p{
         padding-top: 5px;
