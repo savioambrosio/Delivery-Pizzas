@@ -1,6 +1,29 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+.avaliacao{
+    display: flex; 
+    padding: 0px;  
+}
+.star-icon{
+    list-style-type: none;
+    border: 4px solid #fff;
+    cursor: pointer;
+    color: gold;
+}
+.star-icon::before{
+  content: "\2605";
+  font-size: 20px;
+}
+.star-icon.ativo ~.star-icon::before{
+    content: "\2606";
+}
+.avaliacao:hover .star-icon::before{
+    content: "\2605";;
+}
+.star-icon:hover ~.star-icon::before{
+    content: "\2606";;
+}
 .box-load{
     position: fixed;
     z-index: 999;
@@ -93,8 +116,11 @@
     position: fixed;
 }
 #navega ul li a:hover{
-    padding-right: 20px;
+    padding-top: 5px;
     color: gold;
+}
+#navega ul li a{
+    padding-right: 25px;
 }
 #navega ul .dropdown-menu{
     padding-right: 20px;
